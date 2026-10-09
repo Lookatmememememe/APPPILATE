@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Séances Pilates</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
 <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
@@ -90,7 +95,40 @@ details summary{cursor:pointer;font-weight:600;color:var(--muted)}
 .det{margin:-6px 0 0 0;padding:10px 14px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;font-size:16px}
 .tkw{display:flex;flex-direction:column;gap:6px}
 .sub-t{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:6px 0 0}
+/* Téléphone (≤ 600 px) : une seule colonne, boutons plus larges au pouce, barre du bas en grille de 2 colonnes */
+@media (max-width:600px){
+  body{padding-inline:12px;padding-block:12px 210px}
+  main{gap:12px}
+  .card{padding:14px;gap:10px;border-radius:12px}
+  h1{font-size:22px}
+  .top{flex-direction:column;align-items:stretch;gap:10px}
+  .seg{width:100%}
+  .seg button{flex:1 1 0;min-width:0;padding:10px 4px;font-size:14px}
+  .grid{grid-template-columns:1fr 1fr;gap:10px}
+  .num-wrap{min-width:0}
+  .num-wrap input{min-width:0;width:100%}
+  .btn{padding:10px 12px}
+  .btn.sm{padding:8px 10px}
+  .chips{gap:8px}
+  .row{gap:8px}
+  .tr .h{flex-direction:column;align-items:stretch}
+  .tr .nm{flex-basis:auto}
+  .tr .opt span{flex-basis:100%}
+  .seg.s{width:100%}
+  .seg.s button{flex:1 1 0;padding:8px 2px;font-size:13px}
+  .tk{padding:12px}
+  .tk .t{font-size:18px}
+  .cours-head .big{font-size:22px}
+  .bar{padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px))}
+  .bar .in{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .bar .msg:empty{display:none}
+  .bar .msg{grid-column:1/-1;font-size:14px;text-align:center}
+  .bar .btn{min-width:0;padding:8px 6px;font-size:14px;line-height:1.2}
+  .bar .btn.pri{grid-column:1/-1}
+}
 </style>
+</head>
+<body>
 
 <main id="app">
   <div class="top">
